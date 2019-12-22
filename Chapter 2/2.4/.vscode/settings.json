@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "string": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "set": "cpp",
+        "ostream": "cpp"
     }
 }
