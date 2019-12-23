@@ -8,26 +8,15 @@ LANG: C++
 #include <fstream>
 #include <string>
 #include <set>
-#include <vector>
 #include <algorithm>
 #include <queue>
 
 using namespace std;
 
 set<string> prims;
-vector<string> primsv;
 string object;
 queue<int> nextPos;
 set<int> visited;
-
-set<string> pruneSet(set<string> s){
-    for(string str : primsv){
-        if(object.find(str) == string::npos){
-            s.erase(str);
-        }
-    }
-    return s;
-}
 
 bool isPrefix(string p, int start){
     if(p.length() > object.length() - start) return false;
@@ -55,8 +44,6 @@ int main() {
     object.erase(std::remove(object.begin(), object.end(), '\n'), object.end());
     object.erase(std::remove(object.begin(), object.end(), ' '), object.end());
     
-
-    primsv = vector<string>(prims.begin(), prims.end());
     
     int maxD = 0;
     nextPos.push(0);
